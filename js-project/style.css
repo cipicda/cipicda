@@ -1,0 +1,189 @@
+:root {
+    --primary-color: #5448c8;
+    --secondary-color: #fea82f;
+    --dark-color: #423e3b;
+    --light-color: #fffecb;
+    --error-color: ##ff2e00;
+    --background-color: #1a1a1a;
+    --background-color-light: #fffecb0d;
+    --primary-font: "Fredoka", sans-serif;
+    --secondary-font: "Quicksand", sans-serif;
+}
+
+body {
+    padding: 1rem 2rem;
+    font-family: var(--primary-font);
+    background-color: var(--background-color);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+nav #board-name {
+    border: 3px solid var(--primary-color);
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: 0.5rem;
+    height: 2rem;
+    width: 12rem;
+    color: var(--light-color);
+    font-size: 1.25rem;
+    padding: 0.25rem 0.75rem;
+}
+
+main {
+    margin-top: 4rem;
+}
+
+main #board-title {
+    color: var(--light-color);
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+main .columns {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+main .columns #column-name {
+    border: 3px solid var(--primary-color);
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: 0.5rem;
+    height: 1.75rem;
+    width: 12rem;
+    color: var(--light-color);
+    font-size: 1rem;
+    padding: 0.25rem 0.75rem;
+}
+
+main .columns #column-add {
+    all: unset;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    text-transform: uppercase;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+}
+
+main .columns #column-add:hover {
+    cursor: pointer;
+}
+
+main #board {
+    border: 1px dashed var(--light-color);
+    border-radius: 1rem;
+    min-height: 10rem;
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+}
+
+main #board .column {
+    padding: 2rem;
+    min-width: 260px;
+    max-width: 260px;
+}
+
+main #board .column .title-container {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+main #board .column .title {
+    color: var(--light-color);
+    margin: 0;
+}
+
+main #board .column .delete {
+    all: unset;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    text-transform: uppercase;
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.5rem;
+}
+
+main #board .column .delete:hover {
+    cursor: pointer;
+}
+
+main #board .column .tasks {
+    margin-top: 1rem;
+    min-height: 200px;
+    background-color: var(--background-color-light);
+    border-radius: 1rem;
+}
+
+main #board .column .label {
+    color: var(--light-color);
+    text-align: center;
+}
+
+main #board .column .tasks {
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+main #board .column .tasks.dragging-over {
+    background-color: var(--light-color);
+}
+
+main #board .column .task {
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+}
+
+main #board .column .task.dragging {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+main #board .column .create-task {
+    border: 3px solid var(--primary-color);
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: 0.5rem;
+    height: 1.5rem;
+    margin: 1rem auto 0;
+    width: 12rem;
+    color: var(--light-color);
+    font-size: 1rem;
+    padding: 0.25rem 0.75rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--background-color);
+    border-radius: 0.5rem;
+    height: 0.75rem;
+    margin: 0 2rem 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 0.5rem;
+    height: 0.75rem;
+    margin: 0 2rem 1rem;
+}
+
+::-webkit-scrollbar {
+    border-radius: 0.5rem;
+    height: 0.75rem;
+}
